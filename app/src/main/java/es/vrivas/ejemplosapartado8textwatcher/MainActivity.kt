@@ -8,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import es.vrivas.ejemplosapartado8textwatcher.R.id.et_palabra
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.min
 
 class MainActivity : AppCompatActivity() {
     var lista = listOf<String>("ahorro", "barco", "barquito", "boquerón", "fichero", "ficticio", "tender", "tendencia", "tomar")
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     // Este método filtra las palabras que empiezan por las letras introducidas por el usuario
     private fun seleccionar_palabras(raiz: String): MutableList<String> {
-        return lista.filter{ it.substring(0,raiz.length)==raiz} as MutableList<String>
+        return lista.filter{ it.substring(0, min(raiz.length,it.length))==raiz} as MutableList<String>
     }
 
 
