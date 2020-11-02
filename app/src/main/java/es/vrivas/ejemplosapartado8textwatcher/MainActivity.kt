@@ -37,10 +37,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         /*
         // 1ª Versión de la captura de eventos: la actividad captura el evento
         // Indico al EditText et_palabra que su manejador de eventos es la propia actividad
-        //et_palabra.addTextChangedListener(this)
+        et_palabra.addTextChangedListener(this)
         */
 
         /*
@@ -70,22 +71,21 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-     /*
-    // 1ª Versión de la captura de eventos: la actividad captura el evento
-    // Tengo que implementar TODOS los métodos abstractos, aunque no se usen
 
-    // Imprescindible ponerlo, porque TextWatcher es abstracto
-    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-    }
+    /*
+   // 1ª Versión de la captura de eventos: la actividad captura el evento
+   // Tengo que implementar TODOS los métodos abstractos, aunque no se usen
 
-    // Imprescindible ponerlo, porque TextWatcher es abstracto
-    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-    }
+   // Imprescindible ponerlo, porque TextWatcher es abstracto
+   override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {   }
 
-    // Actualiza la lista de palabras
-    override fun afterTextChanged(s: Editable?) {
-        val coinciden = seleccionar_palabras(et_palabra.text.toString())
-        tv_lista_palabras.text=coinciden.toString()
-    }
+   // Imprescindible ponerlo, porque TextWatcher es abstracto
+   override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {   }
+
+   // Actualiza la lista de palabras
+   override fun afterTextChanged(s: Editable?) {
+       val coinciden = seleccionar_palabras(et_palabra.text.toString())
+       tv_lista_palabras.text=coinciden.toString()
+   }
     */
 }
